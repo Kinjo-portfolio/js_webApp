@@ -1,6 +1,6 @@
 import * as model from "./model.js"
 
-
+// テーブルデータ呼び出し
 export const getTableDataInfo = async(data) => {
     const post = {
         id: data
@@ -9,6 +9,7 @@ export const getTableDataInfo = async(data) => {
     return json
 }
 
+//テーブルデータ更新・新規
 export const upsertTableData = async(id,data) => {
     const post = {
         id: id,
@@ -17,6 +18,7 @@ export const upsertTableData = async(id,data) => {
     const json = await model.upsertTableData(post)
     return json
 }
+
 
 export const deleteTableData = async(data) => {
     const post = {
