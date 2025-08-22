@@ -1,0 +1,24 @@
+{
+  "name": "js_webapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy:vendor": "node scripts/copyVendor.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "exceljs": "^4.4.0",
+    "express": "^5.1.0",
+    "file-saver": "^2.0.5",
+    "handsontable": "^6.2.2",
+    "jquery": "^3.7.1",
+    "mongoose": "^8.17.0",
+    "multer": "^2.0.2",
+    "sweetalert2": "^11.22.3"
+  }
+}

@@ -1,0 +1,205 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px;
+  background-color: #fff;
+}
+
+/* 入力欄 */
+#input-area {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 15px;
+}
+
+#input-area label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  text-align: center;
+}
+
+#input-area input[type="text"] {
+  width: 100px;
+  height: 25px;
+  border: 1px solid #000;
+  background-color: #fff;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* テーブルIDと表示ボタン */
+#table-id-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#table-id-area label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  text-align: center;
+}
+
+#table-id-area input[type="number"] {
+  width: 100px;
+  height: 25px;
+  border: 1px solid #000;
+  background-color: #fff;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+#showTableBtn {
+  align-self: flex-end; /* inputの下に合わせる */
+  height: 30px;
+}
+
+/* 操作ボタンブロック（DB保存・Excel出力） */
+#operation-button {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* すべてのボタン共通
+button {
+  background-color: #cdebf9;
+  border: 1px solid #888;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+} */
+
+/* button:hover {
+  background-color: #a5d7ec;
+} */
+
+/* Handsontable 本体 */
+#hot {
+  margin-top: 20px;
+  border-collapse: collapse;
+  border: 2px solid #000;
+  width: auto;
+}
+
+#hot td {
+  border: 1px solid #000;
+  padding: 4px 10px;
+  text-align: center;
+}
+
+#hot th {
+  background-color: #cdebf9;
+  border: 1px solid #000;
+  padding: 4px 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#hot td:focus {
+  outline: none;
+  background-color: inherit;
+  box-shadow: none;
+}
+
+.highlighted-row {
+  background-color: #a6e6a6;
+}
+
+.delete-cell {
+  background-color: #ccc !important;
+  text-align: center;
+  cursor: pointer;
+}
+
+#hot table {
+  table-layout: fixed !important;
+}
+
+/* Handsontable 独自クラス対応（強制背景） */
+.htCore td.highlighted-row {
+  background-color: #c2e5d3 !important;
+}
+
+/* ボタンスタイル */
+#addRow {
+  background-color: #cdebf9;
+  border: 1px solid #888;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 18px;
+}
+
+#showTableBtn {
+  background-color: #cdebf9;
+  border: 1px solid #888;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#importExcelBtn {
+  align-self: flex-end;
+  background-color: #cdebf9;
+  border: 1px solid #888;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#saveBtn {
+  background-color: #cdebf9;
+  border: 1px solid #888;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#exportExcelBtn {
+  background-color: #cdebf9;
+  border: 1px solid #888;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#deleteTableBtn {
+  align-self: flex-end;
+  background-color: #cdebf9;
+  border: 1px solid #888;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* フォーム3ブロック配下のボタンすべてに適用 */
+#input-area button,
+#table-id-area button,
+#operation-button button {
+  transition: filter .15s ease;
+}
+
+#input-area button:hover,
+#table-id-area button:hover,
+#operation-button button:hover {
+  filter: brightness(.94);   /* ほんのり濃く */
+}
+
+#input-area button:active,
+#table-id-area button:active,
+#operation-button button:active {
+  filter: brightness(.88);   /* クリック中はさらに濃く */
+}

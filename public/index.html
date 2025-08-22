@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>webアプリでExcel操作</title>
+    <link rel="stylesheet" href="/libs/handsontable/dist/handsontable.full.min.css" />
+    <script src="/libs/jquery/dist/jquery.min.js"></script>
+    <script src="/libs/handsontable/dist/handsontable.full.min.js"></script>
+    <script src="/libs/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="/libs/file-saver/dist/FileSaver.js"></script>
+    <script src="/libs/exceljs/dist/exceljs.min.js"></script>
+
+    <script type="module" src="./src/table.js" defer></script>
+    <link rel="stylesheet" href="./index.css"/>
+</head>
+<body>
+    <!-- 入力エリア -->
+    <div id="input-area">
+        <label>itemA <input type="text" id="itemA"></label>
+        <label>itemB <input type="text" id="itemB"></label>
+        <label>itemC <input type="text" id="itemC"></label>
+        <button id="addRow">追加</button>
+    </div>
+
+    <!-- テーブル表示あれこれ -->
+    <div id="table-id-area" style="margin-top: 10px;">
+        <label>テーブルID<input type="number" id="tabeIdInput"/></label>
+        <button id="showTableBtn">表示</button>
+        <button id="deleteTableBtn">DBから削除</button>
+        <button id="importExcelBtn">Excel読み込み</button>
+        <input id="excelInput" type="file" accept=".xlsx" style="display: none"/>
+    </div>
+
+    <!-- テーブル反映場所 -->
+    <div id="hot"></div>
+
+    <!-- 保存とか出力 -->
+    <div id="operation-button" style="margin-top: 10px;">
+        <button id = "saveBtn">DB保存</button>
+        <button id = "exportExcelBtn">Excel出力</button>
+    </div>
+</body>
+</html>
