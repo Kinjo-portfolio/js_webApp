@@ -126,8 +126,3 @@ curl -X POST http://localhost:3000/api/table/upsertTableData   -H "Content-Type:
 - `src/dbconnect.mjs`  
   - `mongodb://localhost:27017/beutuki` に接続
 
----
-
-## 📝 ライセンス
-
-MIT（ポートフォリオ用）。必要に応じて変更してください。
